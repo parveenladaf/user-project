@@ -32,7 +32,11 @@ export class UsersComponent implements OnInit {
         }
       },
       (err) => {
-        this.userService.openToast(err['error']['message'], 'Close');
+        if (err['error']['message'] == undefined) {
+          this.userService.openToast('Internal Server error', 'Close');
+        } else {
+          this.userService.openToast(err['error']['message'], 'Close');
+        }
       }
     );
   }
@@ -46,8 +50,13 @@ export class UsersComponent implements OnInit {
         }
       },
       (err) => {
-        this.userService.openToast(err['error']['message'], 'Close');
+        if (err['error']['message'] == undefined) {
+          this.userService.openToast('Internal Server error', 'Close');
+        } else {
+          this.userService.openToast(err['error']['message'], 'Close');
+        }
       }
-    );  }
+    );
+  }
 }
 
