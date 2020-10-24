@@ -1,0 +1,91 @@
+<!-- Registration form -->
+<div class="content d-flex justify-content-center align-items-center">
+  <form [formGroup]="userForm" class="form-validate-jquery" class="flex-fill">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="card mb-0">
+          <div class="card-body">
+            <div class="text-center mb-3">
+              <h2 class="mb-0">Create user</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="form-group form-group-feedback form-group-feedback-right"
+                >
+                  <label>Name:<span class="text-danger">*</span></label>
+
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    formControlName="name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div
+                  class="form-group form-group-feedback form-group-feedback-right"
+                >
+                  <label>Mobile No:<span class="text-danger">*</span></label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="mobileNo"
+                    formControlName="mobile_no"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="form-group form-group-feedback form-group-feedback-right"
+                >
+                  <label>Email Id:<span class="text-danger">*</span></label>
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="emailId"
+                    formControlName="email_id"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div
+                  class="form-group form-group-feedback form-group-feedback-right"
+                >
+                  <label>Address:<span class="text-danger">*</span></label>
+                  <input
+                    type="address"
+                    class="form-control"
+                    name="address"
+                    formControlName="address"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              (click)="onSave()"
+              class="btn bg-teal-400 btn-labeled btn-labeled-right"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
